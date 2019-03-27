@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+
+<style type="text/css">
+
+   .sign {
+    		display: block; /* Блочный элемент */
+    		/*float: center; /* Блоки выстраиваются по горизонтали */
+    		margin: 0 0px 30px 0; /* Отступы */
+    		text-align: left; /* Выравнивание по центру */ 
+    	}  
+   .sign figcaption {
+    					margin: 0; /* Отступы вокруг абзаца */
+      				}
+   img {
+			border: 4px solid #333;
+		}
+	H1 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 300%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 50px 0; /* Отступы */
+		}
+	h3 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 150%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 20px 0; /* Отступы */
+		}	
+	div {
+			margin: 0 0px 20px 0; /* Отступы */
+		}	
+</style>
+
+</head>
+
+<body>
+
+<h1>Приём возвратов из торговой точки на склад</h1>
+   
+<h3>Для приёма возвратов из ТТ делаем следующее:</h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>создаём новый документ прихода и в нём заполняем следующие поля:</li>
+			<ol>
+				<li style="list-style-type: lower-alpha"><strong>Транзакция. «108 - Возврат из торговой точки»</strong>: при выборе данной транзакции в списке ожидаемых приходов - будут отображены только ожидаемые приходы по возвратам.</li>
+				<li style="list-style-type: lower-alpha"><strong>Поставщик</strong>. Выбрать поставщика <strong>«Возврат из торговой точки»</strong>.</li>
+				<li style="list-style-type: lower-alpha"><strong>Ожидаемый</strong>. Выбираем ожидаемый приход, при необходимости добавить ещё ожидаемые приходы – делаем это на вкладке логистика.</li>
+				<li style="list-style-type: lower-alpha">Сохраняем введённые данные.</li>
+			</ol>
+		<li>Нажимаем кнопку <strong>«Дополнительные опции»</strong>, появится список команд – выбираем <strong>«Заполнить по ожидаемому»</strong>. Данную команду можно выбрать только в том случае, если документ прихода пустой, т.е. в нём нет ранее добавленных строк.</li>		
+			<div><img alt="" src="img55.jpg" /> <img alt="" src="img56.gif" /></div>
+		<li>После этого, будут добавлены строки с товарами (синего цвета), согласно ожидаемому приходу. Все строки необходимо поместить в буфер, для этого выделяем их и нажимаем кнопку <strong>«Поместить в буфер» <img alt="" src="img5B.gif" /></strong></li>
+		<li>Заходим в диспетчер, где уже есть приказ на размещение созданного нами возврата и отправляем этот приказ на терминал.</li>
+		<li>Теперь осталось сканировать штрих код ячейки боя, куда необходимо разместить товар и непосредственно сам товар.</li>
+		<li style="list-style-type: none"><strong>Срок годности проставляется автоматически</strong>, и равен дате создания документа (текущей дате), при необходимости можно изменить срок годности, но это ни на что не повлияет.</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
