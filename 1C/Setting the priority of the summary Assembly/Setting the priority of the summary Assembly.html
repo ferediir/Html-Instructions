@@ -19,6 +19,9 @@
    img {
 			border: 4px solid #333;
 		}
+		.border {
+    border: 0px solid #333;
+   }
 	H1 {
 			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
     		font-size: 300%; /* Размер текста */ 
@@ -36,9 +39,69 @@
 		}	
 </style>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js "></script>
+
+<script language="javascript">
+$(document).ready(function(){
+var headermenu = $(".float-menu");
+var offset = headermenu.offset();
+var left = offset.left;
+var top = offset.top;
+var width = $(".float-menu").width();
+var height = $(".float-menu").height();
+ 
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > top) {
+$('#float').css({
+width:width+'px',
+height:height+'px'
+});
+$('.float-menu').css({
+left:left+'px',
+position:'fixed',
+top:"0px",
+width:width+"px"
+});
+} else {
+$('#float').css({
+width:'0px',
+height:'0px'
+});
+$('.float-menu').css({
+position:'static',
+});
+}
+});
+});
+</script>
+
+<style type="text/css">
+.float-menu
+{
+width:100%;
+float:left;
+left:0;
+}
+</style>
+
+<style media='print' type='text/css'>
+#navbar-iframe {display: none; height: 0px; visibility: hidden;}
+.noprint {display: none;}
+body {background:#FFF; color:#000;}
+a {text-decoration: underline; color:#00F;}
+}
+</style>
+
 </head>
 
 <body>
+
+<div class="float-menu" style="height: 52px">
+<span class="noprint">
+<a class ="print-doc" href="javascript:(print());"><img alt="" class="border" height="32" src="../../img/print.png" width="32" "margin-left: 10px" style="vertical-align:middle"/> Печать</a>
+</span>
+</div>
 
 <h1>Как задать порядок сборки сводных при наличии WMS?</h1>
 
