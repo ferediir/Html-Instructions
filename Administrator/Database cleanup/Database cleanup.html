@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Database cleanup</title>
+
+<style type="text/css">
+
+   .sign {
+    		display: block; /* Блочный элемент */
+    		/*float: center; /* Блоки выстраиваются по горизонтали */
+    		margin: 0 0px 30px 0; /* Отступы */
+    		text-align: left; /* Выравнивание по центру */ 
+    	}  
+   .sign figcaption {
+    					margin: 0; /* Отступы вокруг абзаца */
+      				}
+   img {
+			border: 4px solid #333;
+		}
+		.border {
+    border: 0px solid #333;
+   }
+	H1 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 300%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 50px 0; /* Отступы */
+		}
+	h3 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 150%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 20px 0; /* Отступы */
+		}	
+	div {
+			margin: 0 0px 20px 0; /* Отступы */
+		}	
+</style>
+
+<script type="text/javascript" src="../../js/jquery-1.11.2.js"></script>
+
+<script language="javascript">
+$(document).ready(function(){
+var headermenu = $(".float-menu");
+var offset = headermenu.offset();
+var left = offset.left;
+var top = offset.top;
+var width = $(".float-menu").width();
+var height = $(".float-menu").height();
+ 
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > top) {
+$('#float').css({
+width:width+'px',
+height:height+'px'
+});
+$('.float-menu').css({
+left:left+'px',
+position:'fixed',
+top:"0px",
+width:width+"px"
+});
+} else {
+$('#float').css({
+width:'0px',
+height:'0px'
+});
+$('.float-menu').css({
+position:'static',
+});
+}
+});
+});
+</script>
+
+<style type="text/css">
+.float-menu
+{
+width:100%;
+float:left;
+left:0;
+}
+</style>
+
+<style media='print' type='text/css'>
+#navbar-iframe {display: none; height: 0px; visibility: hidden;}
+.noprint {display: none;}
+body {background:#FFF; color:#000;}
+a {text-decoration: underline; color:#00F;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="float-menu" style="height: 52px">
+<span class="noprint">
+<a class ="print-doc" href="javascript:(print());"><img alt="" class="border" height="32" src="../../img/print.png" width="32" "margin-left: 10px" style="vertical-align:middle"/> Печать</a>
+</span>
+</div>
+
+<h3>Очистка базы данных (с сохранением остатков).</h3>
+
+<div><p>Очищать базу данных (БД) необходимо, когда в ней накапливается слишком много информации, что может замедлять работу программы и не редко приводить к ошибкам. </p></div>
+
+<h3>Последовательность действий: </h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>Создаём инвентаризацию, включающую все ячейки 2 и 3-го типа (MS и P). </li>
+		<li>Нажимаем на вкладке <strong>«Сравнение»</strong> кнопку <strong>«Дополнительные опции»</strong>, далее из выпадающего списка выбираем строку <strong>«Сохранить в файл». </strong></li>
+			<div><img alt="" src="img8.jpg" /></div>		
+		<li>Указываем папку, куда будем сохранять файл инвентаризации, в последующем данный файл будет использован для загрузки.</li>
+		<li>Заходим на вкладку <strong>«Утилиты БД»</strong>, далее <strong>«Система»</strong> - <strong>«Очистка БД»</strong>.</li>
+			<div><img alt="" src="imgA.jpg" /></div>		
+		<li>Откроется окно <strong>«Очистка БД»</strong>, выбираем глубину очистки <strong>«Документы, остатки»</strong> и нажимаем кнопку <strong>«Выполнить»</strong> и подтверждаем свой выбор.</li>
+		<li>После завершения очистки надо запустить <strong>«Тест целостности БД»</strong>: Система - <strong>«Тест целостности БД»</strong>, после этого откроется окно «Настройка программы контроля целостности», в этом окне по мимо уже установленных настроек устанавливаем галочку <strong>«Монотонность проверки»</strong> и нажимаем <strong>«Старт»</strong>.</li>
+			<div><img alt="" src="imgC.jpg" /></div>
+			<div><img alt="" src="imgF.jpg" /></div>		
+		<li>В процессе проверки БД на целостность возникнут рассогласования – для их устранения нажимаем <strong>«F2»</strong> во всех случаях.</li>
+		<li>После завершения проверки создаём новую инвентаризацию и загружаем в неё сохранённый ранее файл. </li>
+			<div><img alt="" src="img11.jpg" /></div>				
+		<li>Выключаем инвентаризацию.</li>
+		<li>Теперь все созданные ранее документы удалены, однако остатки товаров остались в неизменном виде.</li>
+	</ul>
+</div>	
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

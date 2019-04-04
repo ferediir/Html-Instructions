@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Terminal PM66 - Android</title>
+
+<style type="text/css">
+
+   .sign {
+    		display: block; /* Блочный элемент */
+    		/*float: center; /* Блоки выстраиваются по горизонтали */
+    		margin: 0 0px 30px 0; /* Отступы */
+    		text-align: left; /* Выравнивание по центру */ 
+    	}  
+   .sign figcaption {
+    					margin: 0; /* Отступы вокруг абзаца */
+      				}
+   img {
+			border: 4px solid #333;
+		}
+		.border {
+    border: 0px solid #333;
+   }
+	H1 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 300%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 50px 0; /* Отступы */
+		}
+	h3 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 150%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 20px 0; /* Отступы */
+		}	
+	div {
+			margin: 0 0px 20px 0; /* Отступы */
+		}	
+</style>
+
+<script type="text/javascript" src="../../js/jquery-1.11.2.js"></script>
+
+<script language="javascript">
+$(document).ready(function(){
+var headermenu = $(".float-menu");
+var offset = headermenu.offset();
+var left = offset.left;
+var top = offset.top;
+var width = $(".float-menu").width();
+var height = $(".float-menu").height();
+ 
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > top) {
+$('#float').css({
+width:width+'px',
+height:height+'px'
+});
+$('.float-menu').css({
+left:left+'px',
+position:'fixed',
+top:"0px",
+width:width+"px"
+});
+} else {
+$('#float').css({
+width:'0px',
+height:'0px'
+});
+$('.float-menu').css({
+position:'static',
+});
+}
+});
+});
+</script>
+
+<style type="text/css">
+.float-menu
+{
+width:100%;
+float:left;
+left:0;
+}
+</style>
+
+<style media='print' type='text/css'>
+#navbar-iframe {display: none; height: 0px; visibility: hidden;}
+.noprint {display: none;}
+body {background:#FFF; color:#000;}
+a {text-decoration: underline; color:#00F;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="float-menu" style="height: 52px">
+<span class="noprint">
+<a class ="print-doc" href="javascript:(print());"><img alt="" class="border" height="32" src="../../img/print.png" width="32" "margin-left: 10px" style="vertical-align:middle"/> Печать</a>
+</span>
+</div>
+
+<h1>Терминал PM66 - Android</h1>
+   
+<h3>Настройка терминала:</h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>Включаем терминал</li>
+		<li>Выбираем язык</li>
+			<div><img alt="" src="imgB.jpg" /></div>
+		<li>Ищем <strong>Русский</strong> и выбираем его</li>
+			<div><img alt="" src="imgF.jpg" /></div>
+		<li>На выборе сети <strong>wifi</strong> жмем <strong>далее</strong>, ее настроим позже</li>
+			<div><img alt="" src="img13.jpg" /></div>
+		<li style="list-style-type: none">Всплывет предупреждающее окно, жмем <strong>ОК</strong></li>
+			<div><img alt="" src="img17.jpg" /></div>
+		<li>В окне ввода <strong>имени</strong> ничего не пишем, жмем <strong>далее</strong></li>
+			<div><img alt="" src="wptv2k4t.jpg" /></div>
+		<li>В окне <strong>защита телефона</strong> снимаем галочку с <strong>защитить устройство</strong> и жмем кнопку <strong>пропустить</strong></li>
+			<div><img alt="" src="img22.jpg" /><img alt="" src="img24.jpg" /></div>
+		<li>Всплывет предупреждающее сообщение, жмем <strong>ОК</strong></li>
+			<div><img alt="" src="img28.jpg" /></div>
+		<li>В окне сервисы <strong>Google</strong> прокручиваем вниз до конца и нажимаем <strong>далее</strong></li>
+			<div><img alt="" src="img2C.jpg" /><img alt="" src="img2E.jpg" /></div>		
+	</ul>
+</div>
+
+<div><p>Ваше устройство готово к работе, теперь его необходимо настроить на программу <strong>EME.WMS</strong></p></div>
+
+<div><p>Для удобства мы подготовим одно устройство и остальные разклонируем.</p></div>
+
+<h3>Исходное устройство:</h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>Копируем программу на устройство через компьютер</li>
+		<li>Устанавливаем программу <strong>EME.WMS</strong> (не запускаем, выдаст ошибку)</li>
+		<li>Заходим в <strong>настройки \ wifi</strong> подключаемся к сети <strong>WMS</strong></li>
+		<li>Заходим в <strong>настройки \ приложения \ EME.WMS \ разрешения</strong> и делаем как на рисунке ниже</li>
+			<div><img alt="" src="img32.jpg" /></div>
+		<li style="list-style-type: none">выводим приложение <strong>EME.WMS</strong> на рабочий стол (рабочую область)</li>
+		<li>Заходим в <strong>настройки \ ScanSetting \ Basic \ Result type</strong> выбираем <strong>Intent Broadcast</strong></li>
+		<li>Заходим в <strong>настройки \ Язык и ввод \ Текущая клавиатура</strong> отключаем <strong>«показать способ ввода»</strong></li>
+		<li>Заходим в меню приложений и находим <strong>Tools</strong></li>
+			<div><img alt="" src="img36.jpg" /></div>
+				<ul style="list-style-type: disc">
+					<li>Запускаем его, и выбираем <strong>Direct Clone</strong></li>
+						<div><img alt="" src="img3A.jpg" /></div>
+					<li>На вкладке <strong>BACKUP</strong> выбираем все элементы <strong>System settings и user applications</strong> </li>
+						<div><img alt="" src="img3D.jpg" /><img alt="" src="img40.jpg" /></div>		
+					<li>Жмем кнопку <strong>BACKUP</strong> , запустится процесс создания образа. Исходный образ готов.</li>
+						<div><img alt="" src="img44.jpg" /></div>
+				</ul>		
+	</ul>
+</div>
+
+<h3>Клонируем образ на остальные терминалы.</h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>Заходим в меню приложений и находим <strong>Tools</strong></li>
+			<div><img alt="" src="img4A.jpg" /></div>		
+		<li>Запускаем его, и выбираем <strong>Direct Clone</strong></li>
+			<div><img alt="" src="img4C.jpg" /></div>		
+				<ul style="list-style-type: disc">
+					<li>На исходном терминале:</li>
+						<ul style="list-style-type: circle">
+							<li>На вкладке <strong>SYNC</strong> выбираем нужный нам образ и жмем на него</li>
+								<div><img alt="" src="img50.jpg" /><img alt="" src="img52.jpg" /></div>		
+							<li>Выбираем <strong>Direct Clone</strong></li>
+								<div><img alt="" src="img57.jpg" /></div>		
+							<li>Запустится окно как на рисунке ниже</li>
+								<div><img alt="" src="img5A.jpg" /></div>
+						</ul>		
+					<li>На клонируемом терминале выбираем <strong>start direct clone service</strong></li>
+						<div><img alt="" src="img5D.jpg" /></div>
+						<ul style="list-style-type: circle">		
+							<li>Запустится окно как на рисунке ниже</li>
+								<div><img alt="" src="img60.jpg" /></div>
+						</ul>									
+					<li style="list-style-type: none"><u>После клонирования оборудование перезагрузится и терминал будет почти готов</u></li>
+				</ul>		
+	</ul>
+</div>
+
+<div><p><strong>Необходимо проверить подключается ли к wifi терминал</strong></p></div>
+
+<div>
+	<ul style="list-style-type: none">
+		<li>Заходим в <strong>настройки \ wifi</strong> подключаемся к сети <strong>WMS</strong></li>	
+	</ul>
+</div>
+
+<div><p><strong>Необходимо проверить выдалось ли разрешение для EME.WMS</strong></p></div>
+
+<div>
+	<ul style="list-style-type: none">
+		<li>Заходим в <strong>настройки \ приложения \ EME.WMS \ разрешения</strong> и делаем как на рисунке ниже</li>
+			<div><img alt="" src="img69.jpg" /></div>
+	</ul>
+</div>
+
+<div><p><strong>После всех проверок выставляем приложение EME.WMS как основной экран</strong></p></div>
+
+<div>
+	<ul style="list-style-type: none">
+		<li>Заходим <strong>настройки \ Домашний экран</strong> и выбираем <strong>EME.WMS</strong></li>	
+	</ul>
+</div>
+
+
+
+
+</body>
+
+</html>

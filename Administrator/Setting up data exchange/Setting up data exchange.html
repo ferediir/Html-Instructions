@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Печать</title>
+<style type="text/css">
+
+   .sign {
+    		display: block; /* Блочный элемент */
+    		/*float: center; /* Блоки выстраиваются по горизонтали */
+    		margin: 0 0px 30px 0; /* Отступы */
+    		text-align: left; /* Выравнивание по центру */ 
+    	}  
+   .sign figcaption {
+    					margin: 0; /* Отступы вокруг абзаца */
+      				}
+   img {
+			border: 4px solid #333;
+		}
+		.border {
+    border: 0px solid #333;
+   }
+	H1 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 300%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 50px 0; /* Отступы */
+		}
+	h3 {
+			font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+    		font-size: 150%; /* Размер текста */ 
+    		font-weight: bolder; /* Светлое начертание */
+    		margin: 0 0px 20px 0; /* Отступы */
+		}	
+	div {
+			margin: 0 0px 20px 0; /* Отступы */
+		}	
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.js%20"></script>
+
+<script language="javascript">
+$(document).ready(function(){
+var headermenu = $(".float-menu");
+var offset = headermenu.offset();
+var left = offset.left;
+var top = offset.top;
+var width = $(".float-menu").width();
+var height = $(".float-menu").height();
+ 
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > top) {
+$('#float').css({
+width:width+'px',
+height:height+'px'
+});
+$('.float-menu').css({
+left:left+'px',
+position:'fixed',
+top:"0px",
+width:width+"px"
+});
+} else {
+$('#float').css({
+width:'0px',
+height:'0px'
+});
+$('.float-menu').css({
+position:'static',
+});
+}
+});
+});
+</script>
+
+<style type="text/css">
+.float-menu
+{
+width:100%;
+float:left;
+left:0;
+}
+</style>
+
+<style media='print' type='text/css'>
+#navbar-iframe {display: none; height: 0px; visibility: hidden;}
+.noprint {display: none;}
+body {background:#FFF; color:#000;}
+a {text-decoration: underline; color:#00F;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="float-menu" style="height: 52px">
+<span class="noprint">
+<a class ="print-doc" href="javascript:(print());"><img alt="" class="border" height="32" src="../../img/print.png" width="32" "margin-left: 10px" style="vertical-align:middle"/> Печать</a>
+</span>
+</div>
+
+
+<h1>Настройка обмена данных 1С с ВМС.</h1>
+   
+<h3>Описание.</h3>
+
+<div><p>Инструкция описывает настройки обмена между 1С и ВМС, а именно:</p></div>
+
+<div>
+	<ul style="list-style-type: disc">
+		<li>Какие контракты на какой склад должны выгружаться.</li>
+		<li>Настройки складов 1С, документы которых должны выгружаться в ВМС.</li>
+		<li>Настройка прав Логиста.</li>
+		<li>Настройка уведомлений для Операторов и Бухгалтеров.</li>
+	</ul>
+</div>
+
+<h3>Подробное описание действий:</h3>
+
+<div>
+	<ul style="list-style-type: decimal">
+		<li>1Открыть <strong>«1С»</strong></li>
+		<li>Открыть <strong>«Операции»</strong></li>
+		<li>Открыть <strong>«Справочник»</strong></li>
+			<div><img alt="" src="imgD.jpg" /></div>
+		<li>В появившемся списке выбрать <strong>«EME.WMS Склады»</strong></li>
+			<div><img alt="" src="img14.jpg" /></div>
+		<li>Появится список существующих складов, выбираем нужный и открываем его.</li>
+			<div><img alt="" src="img17.jpg" /></div>
+	</ul>
+</div>
+
+<div><p>В открывшемся окне можно выполнить следующие действия:</p></div>
+
+<div>
+	<ul style="list-style-type: disc">
+		<li>Добавить получателей отчёта, содержащего перечень клиентов, для которых оператор в корректировках указал значение срока большее, чем определено договором с этим клиентом.</li>
+			<div><img alt="" src="img1C.gif" /></div>
+		<li>Определить номенклатурные группы, которые будут выгружаться на склад.</li>
+			<div><img alt="" src="img1E.jpg" /></div>
+		<li style="list-style-type: none">Необходимо заполнить следующие поля:</li>
+				<ul style="list-style-type: circle">
+					<li><u>Номенклатурная группа.</u> Выбирается из справочника.</li>
+					<li><u>Синоним.</u> Одно слово, которое описывает номенклатурную группу (или несколько). Не должно быть пробелов, точек, запятых и прочих специальных символов. Только буквы и цифры. Номенклатурные группы с одинаковыми синонимами выгружаются как один документ. И собираются сборщиком как один документ.</li>
+					<li><u>BBD для склада</u> - Минимальный срок годности. Число, означающее минимальный остаток срока годности, при котором товар всё ещё может уехать со склада без заведения промоактивностей. Обычно это 21 день, но для товара, являющегося скоропортом – это значение должно быть меньше.</li>
+					<li><u>Позаявочно.</u> Определяет, как будут выгружаться заявки. Либо объединенные в одну сводную, либо каждая заявка в отдельности. <strong>ВАЖНО!</strong> Заявки выгружаются только после их включения в состав сводной накладной.</li>
+					<li><u>BBD для холодильника.</u> Минимальный остаток срока годности, при котором товар, хранящийся в рефрижераторных контейнерах, может уходить клиентам.</li>
+					<li><u>Получатель рассылки.</u> Здесь указывается эл. адрес человека, который будет получать письма с результатом «предпросчёта» заявок в 1С, учитывая актуальные остатки в ВМС. При необходимости добавить нескольких людей в рассылку, сделать это можно разграничив их адреса точкой с запятой – « ; ».</li>					
+				</ul>
+		<li>Определить, документы каких складов должны выгружаться на текущий склад ВМС. Этот пункт настраивается только администратором ВМС при запуске склада. </li>
+			<div><img alt="" src="img28.gif" /></div>
+		<li>Указать, кто будет логистом на данном складе. Внесение пользователя в этот список даёт ему право выгружать сводные накладные на определённую дату. </li>
+			<div><img alt="" src="img2A.gif" /></div>
+		<li>Указать, операторов и бухгалтеров, которым нужно напоминание о выгрузке таких документов как <strong>«Сводная накладная»</strong> или <strong>«Списание»</strong></li>
+			<div><img alt="" src="img2C.gif" /></div>
+		<li style="list-style-type: none">Напоминание появляется при проведении документа и выглядит так:</li>
+			<div><img alt="" src="img31.gif" /></div>			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

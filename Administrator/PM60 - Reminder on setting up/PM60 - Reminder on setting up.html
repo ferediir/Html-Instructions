@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Печать</title>
+
+<style type="text/css">
+
+.sign {
+		display: block; /* Блочный элемент */
+		/*float: center; /* Блоки выстраиваются по горизонтали */
+		margin: 0 0px 30px 0; /* Отступы */
+		text-align: left; /* Выравнивание по центру */ 
+	}  
+.sign figcaption {
+		margin: 0; /* Отступы вокруг абзаца */
+	}
+img {
+		border: 4px solid #333;
+	}
+.border {
+		border: 0px solid #333;
+	}
+H1 {
+		font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+		font-size: 300%; /* Размер текста */ 
+		font-weight: bolder; /* Светлое начертание */
+		margin: 0 0px 50px 0; /* Отступы */
+	}
+h3 {
+		font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта */ 
+		font-size: 150%; /* Размер текста */ 
+		font-weight: bolder; /* Светлое начертание */
+		margin: 0 0px 20px 0; /* Отступы */
+	}	
+div {
+		margin: 0 0px 20px 0; /* Отступы */
+	}	
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.js%20"></script>
+
+<script language="javascript">
+$(document).ready(function(){
+var headermenu = $(".float-menu");
+var offset = headermenu.offset();
+var left = offset.left;
+var top = offset.top;
+var width = $(".float-menu").width();
+var height = $(".float-menu").height();
+ 
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > top) {
+$('#float').css({
+width:width+'px',
+height:height+'px'
+});
+$('.float-menu').css({
+left:left+'px',
+position:'fixed',
+top:"0px",
+width:width+"px"
+});
+} else {
+$('#float').css({
+width:'0px',
+height:'0px'
+});
+$('.float-menu').css({
+position:'static',
+});
+}
+});
+});
+</script>
+
+<style type="text/css">
+.float-menu
+{
+width:100%;
+float:left;
+left:0;
+}
+</style>
+
+<style media='print' type='text/css'>
+#navbar-iframe {display: none; height: 0px; visibility: hidden;}
+.noprint {display: none;}
+body {background:#FFF; color:#000;}
+a {text-decoration: underline; color:#00F;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="float-menu" style="height: 52px">
+<span class="noprint">
+<a class ="print-doc" href="javascript:(print());"><img alt="" class="border" height="32" src="../../img/print.png" width="32" "margin-left: 10px" style="vertical-align:middle"/> Печать</a>
+</span>
+</div>
+
+<div>
+		<ul style="list-style-type: disc">
+			<li>Распаковать терминал</li>
+				<ul style="list-style-type: circle">
+					<li>Наклеить защитную плёнку.</li>
+					<li>Прицепить стилус.</li>
+					<li>Прикрепить ладонный ремешок.</li>
+				</ul>
+			<li>Обновить прошивку до актуальной версии.</li>
+				<ul style="list-style-type: circle">
+					<li>кинуть на SD карту файлы прошивки.</li>
+					<li>Вставить её в терминал. Запустить Self update с карты памяти.</li>
+				</ul>
+			<li>Установить ЕМЕ.</li>
+				<ul style="list-style-type: circle">
+					<li>Скинуть программу на терминал</li>
+					<li>Настроить автозапуск.</li>
+					<li>Настроить подключение к серверу.</li>
+					<li>Проверить, что программа обновилась до последней версии.</li>
+				</ul>
+			<li>Дата и время.</li>
+				<ul style="list-style-type: circle">
+					<li>Настроить часовой пояс, дату и время. Помни, что настраиваем терминал в соответствии с часовым поясом того, филиала, где будет нахоиться терминал. </li>
+					<li>Настроить региональные параметры.</li>
+						<ul style="list-style-type: square">
+							<li>Регион – Россия.</li>
+							<li>Символ-разделитель – точка.</li>
+						</ul>
+				</ul>
+			<li>Главный экран. </li>
+				<ul style="list-style-type: circle">
+					<li>Вынести программу на рабочий стол. </li>
+						<ul style="list-style-type: square">
+							<li>Пуск – Сеттингс – Хоум. Выбираем тему. На вкладке Items отмечаем Date, Wireless, Terminal. Терминал появится только после первого запуска программы.</li>
+						</ul>
+				</ul>
+			<li>Настройка подсветки и отключения.</li>
+				<ul style="list-style-type: circle">
+					<li>Пуск – Сеттингс – Систем – Бэклайт.</li>
+					<li>От батареи</li>
+						<ul style="list-style-type: square">
+							<li>Выключаем подсветку через минуту.</li>
+							<li>Яркость средняя.</li>
+						</ul>
+					<li>От сети.</li>
+						<ul style="list-style-type: square">
+							<li>Яркость 1-2 ступени.</li>
+							<li>Выключаем подсветку через минуту.</li>
+						</ul>
+					<li>Включаем подсветку клавиатуры.</li>
+					<li>Go to power applet</li>
+						<ul style="list-style-type: square">
+							<li>Вкладка advanced</li>
+								<ul style="list-style-type: disc">
+									<li>От батареи отключаемся, если терминал не используется 5 минут.</li>
+									<li>От сети не отключаемся.</li>
+								</ul>
+							<li>Вкладка CPU Power.</li>
+								<ul style="list-style-type: disc">
+									<li>Manual power 1000 MHz.</li>
+								</ul>
+						</ul>
+				</ul>
+			<li>Настраиваем беспроводную сеть.</li>
+				<ul style="list-style-type: circle">
+					<li>Выбираем сеть WMS.</li>
+					<li>В настройках драйверов выставляем следующие параметры</li>
+						<ul style="list-style-type: square">
+							<li>Roaming Trigger 75</li>
+								<ul style="list-style-type: disc">
+									<li>Нажать кнопку "Save", устройство перезагрузится, без нажатия настройки не сохранятся</li>
+								</ul>
+							<li>BG Scan Trigger 65</li>
+								<ul style="list-style-type: disc">
+									<li>Нажать кнопку "Save", устройство перезагрузится, без нажатия настройки не сохранятся</li>
+								</ul>
+							<li>Control 802 11 d – disable</li>
+							<li>Control 802 11 h – disable</li>
+							<li>Supported Band – B/G Only</li>
+								<ul style="list-style-type: disc">
+									<li>Нажать кнопку "Save", устройство перезагрузится, без нажатия настройки не сохранятся</li>
+								</ul>
+						</ul>
+				</ul>
+			<li>Настраиваем сканер</li>
+				<ul style="list-style-type: circle">
+					<li>Ставим максимальную громкость уведомления</li>
+					<li>Выключаем звук для неудачного сканирования.</li>
+					<li>Добавляем вибрацию для неудачного сканирования.</li>
+				</ul>
+			<li>Настраиваем настраиваемые клавиши.</li>
+				<ul style="list-style-type: circle">
+					<li>Левая – Ф9.</li>
+					<li>Правая – Калькулятор. Settings– «Personal» - «Buttons» - APP2 присваиваем «Calculator».</li>
+				</ul>
+	</ul>
+</div>
+
+</body>
+
+</html>
